@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="8dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusableInTouchMode="true"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome"/>
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/kindly_input_your_login_details"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="@string/email"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_input_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/password"
+            app:cornerRadius="16dp"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/email_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_input_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/password_input_layout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Bookstore</string>
+    <string name="email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="kindly_input_your_login_details">Kindly input your login details</string>
 </resources>
