@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bookstore</string>
+    <string name="email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="kindly_input_your_login_details">Kindly input your login details</string>
+    <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
+    <string name="register">Register</string>
 </resources>
