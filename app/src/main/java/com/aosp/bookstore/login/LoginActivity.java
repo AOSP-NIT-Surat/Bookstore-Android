@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aosp.bookstore.MainActivity;
 import com.aosp.bookstore.R;
@@ -26,8 +28,10 @@ public class LoginActivity extends AppCompatActivity {
         emailEditTextLayout = findViewById(R.id.email_input_layout);
         passwordEditText = findViewById(R.id.password_input_editText);
         passwordEditTextLayout = findViewById(R.id.password_input_layout);
+        TextView registerTv = findViewById(R.id.register_text);
         MaterialButton submitButton = findViewById(R.id.submit_button);
         submitButton.setOnClickListener(v -> performLogin());
+        registerTv.setOnClickListener(v -> navigateToSignUp());
     }
 
     private void performLogin() {
@@ -48,5 +52,10 @@ public class LoginActivity extends AppCompatActivity {
         }
         startActivity(new Intent(this, MainActivity.class));
         finish();
+    }
+
+    private void navigateToSignUp() {
+        // Todo: Create Sign up page
+        Toast.makeText(this, R.string.register, Toast.LENGTH_SHORT).show();
     }
 }
