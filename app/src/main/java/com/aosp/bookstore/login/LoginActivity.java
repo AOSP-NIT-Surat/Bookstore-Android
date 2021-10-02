@@ -56,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void navigateToSignUp() {
         Intent i = new Intent(this, RegisterActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
 }
