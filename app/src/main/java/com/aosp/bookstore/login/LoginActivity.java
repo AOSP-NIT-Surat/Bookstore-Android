@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateToSignUp() {
-        // Todo: Create Sign up page
-        Toast.makeText(this, R.string.register, Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
     }
 }

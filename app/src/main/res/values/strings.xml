@@ -7,4 +7,12 @@
     <string name="kindly_input_your_login_details">Kindly input your login details</string>
     <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
     <string name="register">Register</string>
+
+    <!-- REGISTRATION STRINGS -->
+    <string name="new_user_sign_up">New user? Sign up!</string>
+    <string name="new_user_name">Name</string>
+    <string name="new_user_contact_number">Contact number</string>
+    <string name="new_user_repeat_password">Repeat password</string>
+    <string name="new_user_has_account">Already have an account?</string>
+    <string name="new_user_sign_in">Sign in</string>
 </resources>
