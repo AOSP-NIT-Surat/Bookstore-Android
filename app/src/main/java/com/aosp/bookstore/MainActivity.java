@@ -12,9 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton expand;
     FloatingActionButton sellBook;
-
     TextView text;
-
     Boolean isAllFabVisible;
 
     @Override
@@ -32,31 +30,22 @@ public class MainActivity extends AppCompatActivity {
 
         isAllFabVisible = false;
 
-        expand.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!isAllFabVisible){
+        expand.setOnClickListener(view -> {
+            if (!isAllFabVisible) {
 
-                    sellBook.show();
-                    text.setVisibility(View.VISIBLE);
+                sellBook.show();
+                text.setVisibility(View.VISIBLE);
 
-                    isAllFabVisible = true;
-                }
-                else{
+                isAllFabVisible = true;
+            } else {
 
-                    sellBook.hide();
-                    text.setVisibility(View.GONE);
+                sellBook.hide();
+                text.setVisibility(View.GONE);
 
-                    isAllFabVisible = false;
-                }
+                isAllFabVisible = false;
             }
         });
 
-        sellBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Clicked!!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        sellBook.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Clicked!!", Toast.LENGTH_SHORT).show());
     }
 }
