@@ -1,6 +1,8 @@
 package com.aosp.bookstore;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -46,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sellBook.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Clicked!!", Toast.LENGTH_SHORT).show());
+        sellBook.setOnClickListener(view -> {
+            Toast.makeText(MainActivity.this, "Clicked!!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, UserProfileActivity.class);
+            startActivity(intent);
+        });
     }
 }
