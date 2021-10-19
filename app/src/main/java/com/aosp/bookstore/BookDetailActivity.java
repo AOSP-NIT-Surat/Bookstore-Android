@@ -100,18 +100,7 @@ public class BookDetailActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if (result.getData() != null && result.getResultCode() == RESULT_OK) {
                         Uri selectedImage = result.getData().getData();
-                        String[] filePathColumn = {MediaStore.Images.Media.DATA};
-                        if (selectedImage != null) {
-                            Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-                            if (cursor != null) {
-                                cursor.moveToFirst();
-
-                                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                                String picturePath = cursor.getString(columnIndex);
-                                bookCoverPhoto.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-                                cursor.close();
-                            }
-                        }
+                        bookCoverPhoto.setImageURI(selectedImage);
                     }
                 }
             }
