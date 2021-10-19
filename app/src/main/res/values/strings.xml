@@ -15,4 +15,13 @@
     <string name="new_user_repeat_password">Repeat password</string>
     <string name="new_user_has_account">Already have an account?</string>
     <string name="new_user_sign_in">Sign in</string>
+
+    <!--    Book details string-->
+    <string name="book_details_title">Book Details</string>
+    <string name="book_title">Title</string>
+    <string name="book_author">Author</string>
+    <string name="book_price">Price</string>
+    <string name="book_description">Description</string>
+    <string name="book_button">Add book</string>
+    <string name="book_alert_title">Choose Book cover picture</string>
 </resources>
